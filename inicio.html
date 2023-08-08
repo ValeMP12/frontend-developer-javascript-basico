@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --blue: #2874a6;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Quicksand", sans-serif;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            gap: 26px;
+            place-content: center;
+        }
+
+        .product-card {
+            width: 240px;
+        }
+
+        .product-card img {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure {
+            margin: 0;
+        }
+
+        .product-info figure img {
+            width: 35px;
+            height: 35px;
+        }
+        .product-info div p :nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info div p :nth-child(2){
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+        }
+        @media (max-width: 640px) {
+            .card-container {
+                grid-template-columns: repeat(auto-fill, 140px);
+            }
+            .product-card {
+                width: 140px;
+            }
+            .product-card img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+
+<body>
+    <section class="main-container">
+        <div class="card-container">
+            <div class="product-card">
+                <img src="https://d50xhnwqnrbqk.cloudfront.net/images/products/large/7501020548495.jpg"
+                    alt="Leche LALA 100" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Leche LALA 100</p>
+                        <p>$35.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://onixsuper.com/wp-content/uploads/2020/08/7501000112784-1.jpg" alt="Nito"
+                    class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Nito</p>
+                        <p>$15.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/R.5089d467fd0d66542ef3078fef548464?rik=YFE0qQDpnvNhzg&pid=ImgRaw&r=0"
+                    alt="Mantecadas Nuez" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Mandecadas con Nuez</p>
+                        <p>$25.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/R.dc444615da8c244f49633c52ce5bbf93?rik=3Akc3lKPLak3rQ&pid=ImgRaw&r=0"
+                    alt="Fanta 500ml" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Fanta 600ml</p>
+                        <p>$18.00</p>
+                </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/R.18bd7660feb4c55bd0ea43afe9163f1d?rik=sfZltm0dJqPzXQ&pid=ImgRaw&r=0"
+                    alt="Coca-Cola" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Coca-Cola 600ml</p>
+                        <p>$19.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.XyhseNfmf0Pghie7-prVewHaHa?pid=ImgDet&rs=1"
+                    alt="Electrolit-Coco" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Electrolit-Coco</p>
+                        <p>$21.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://dashboard.parii.app/vistas/img/multimedia/powerade-azul-600ml/poerade%20azul.png"
+                    alt="Powerade-Azul" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Powerade-Azul</p>
+                        <p>$20.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0105/9212/4964/products/2145_gatorate_naranje_1600x.jpg?v=1582315087"
+                    alt="Gatorade-Naranja" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Gatorade-Naranja 500ml</p>
+                        <p>$20.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/R.975516e893c10e6a632878a1b5e1a134?rik=ei32vqWKnGRHXA&pid=ImgRaw&r=0"
+                    alt="Yakult" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Yakult</p>
+                        <p>$8.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.comercialmeraz.com/wp-content/uploads/2018/02/00750105533998L-5.jpg"
+                    alt="Danonino" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Danonino</p>
+                        <p>$20.00</p>
+                    </div>
+                    <figure>
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
+                            alt="">
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

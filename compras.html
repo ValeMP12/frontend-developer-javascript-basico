@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --blue: #2874a6;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Quicksand", sans-serif;
+        }
+        .product-detail {
+            width: 360px;
+            padding: 24px;
+            box-sizing: border-box;
+            position: absolute;
+            right: 0;
+
+        }
+        .title-container{
+          display: flex;
+        }
+        .title-container img {
+          transform: rotate(180deg);
+          margin: 14px;
+        }
+          .title {
+            font-size: var(--lg);
+            font-weight: bold;
+          }
+        .shopping-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .shopping-cart figure {
+            margin: 0;
+        }
+        .shopping-cart figure img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .shopping-cart p:nth-child(2) {
+            color: var(--black);
+        }
+        .shopping-cart p:nth-child(3) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .order {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background:var(--text-input-field) ;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        } 
+        .order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+        }
+        .order p:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+        }
+        .order p span:nth-child(1) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        
+        .primary-button {
+            background-color: var(--blue);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .add-to-cart-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (max-width: 640px){
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+      <div class="title-container">
+        <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/flechita.svg" alt="">
+        <p class="title"> Mi orden</p>
+      </div>
+        <div class="my-order-content">
+          </div>
+  
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://d50xhnwqnrbqk.cloudfront.net/images/products/large/7501020548495.jpg"
+                alt="Leche LALA 100"
+              />
+            </figure>
+            <p>Leche LALA 100</p>
+            <p>$35.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+  
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://onixsuper.com/wp-content/uploads/2020/08/7501000112784-1.jpg"
+                alt="Nito"
+              />
+            </figure>
+            <p>Nito</p>
+            <p>$15.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://th.bing.com/th/id/R.5089d467fd0d66542ef3078fef548464?rik=YFE0qQDpnvNhzg&pid=ImgRaw&r=0"
+                alt="Mantecadas Nuez"
+              />
+            </figure>
+            <p>Mantecadas con Nuez</p>
+            <p>$30.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+  
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://th.bing.com/th/id/R.dc444615da8c244f49633c52ce5bbf93?rik=3Akc3lKPLak3rQ&pid=ImgRaw&r=0"
+                alt="Fanta 500ml"
+              />
+            </figure>
+            <p>Fanta</p>
+            <p>$18.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+  
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://th.bing.com/th/id/R.18bd7660feb4c55bd0ea43afe9163f1d?rik=sfZltm0dJqPzXQ&pid=ImgRaw&r=0"
+                alt="Coca-Cola"
+              />
+            </figure>
+            <p>Coca-Cola</p>
+            <p>$19.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+  
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://th.bing.com/th/id/OIP.XyhseNfmf0Pghie7-prVewHaHa?pid=ImgDet&rs=1"
+                alt="Electrolit-Coco"
+              />
+            </figure>
+            <p>Electrolit-Coco</p>
+            <p>$21.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+  
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://dashboard.parii.app/vistas/img/multimedia/powerade-azul-600ml/poerade%20azul.png"
+                alt="Powerade-Azul"
+              />
+            </figure>
+            <p>Powerade-Azul</p>
+            <p>$20.00</p>
+            <img src="./curso-frontend-developer-practico-main (1)/curso-frontend-developer-practico-main/icons/icon_close.png" alt="cerrar">
+          </div>
+
+          <div class="order">
+            <p>
+                <span>Total</span>
+              
+            </p>
+            <p>$158.00</p>
+          </div>
+          <button class="primary-button add-to-cart-button">
+            Pagar
+          </button>
+        </div>
+    </aside>
+</body>
+</html>
