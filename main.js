@@ -3,12 +3,18 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
-const asideshoppingCartContainer = document.querySelector('#shoppingCartContainer');
+const productDetailCloseIcon = document.querySelector('.product-detail-close');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardContainer = document.querySelector('.card-container');
+const productDetailContainer = document.querySelector('#productDetail');
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoIcon.addEventListener('click', toggleCarritoAside);
+productDetailCloseIcon.addEventListener('click', closeProductDetailAside);
+
+
+
 
 function toggleDesktopMenu() {
     const asideClosed = shoppingCartContainer.classList.contains('inactive');
@@ -25,6 +31,8 @@ function toggleMobileMenu() {
     if (!asideClosed) {
         shoppingCartContainer.classList.add('inactive');
     }
+    closeProductDetailAside();
+    
     mobileMenu.classList.toggle('inactive');
 }
 
@@ -34,8 +42,20 @@ function toggleCarritoAside() {
     if (!mobileMenuClosed) {
         mobileMenu.classList.add('inactive');
     }
+    const productDetailClose = productDetailContainer.classList.contains('inactive');
+
+    if (!productDetailClose) {
+        productDetailContainer.classList.add('inactive');
+    }
     shoppingCartContainer.classList.toggle('inactive');
 
+}
+function openProductDetailAside (){
+    shoppingCartContainer.classList.add('inactive');
+    productDetailContainer.classList.remove('inactive');
+}
+function closeProductDetailAside (){
+    productDetailContainer.classList.add('inactive');
 }
 
 const productList = [];
@@ -98,22 +118,6 @@ productList.push({
     price: 22,
     image: 'https://th.bing.com/th/id/OIP.XyhseNfmf0Pghie7-prVewHaHa?pid=ImgDet&rs=1'
 });
-/* 
-<div class="product-card">
-    <img src="https://d50xhnwqnrbqk.cloudfront.net/images/products/large/7501020548495.jpg"
-        alt="Leche LALA 100" class="product-img">
-        <div class="product-info">
-            <div>
-                <p>Leche LALA 100</p>
-                <p>$35.00</p>
-            </div>
-            <figure>
-                <img src="https://static.vecteezy.com/system/resources/previews/000/437/871/non_2x/vector-add-to-cart-vector-icon.jpg"
-                    alt="">
-            </figure>
-        </div>
-</div>
-*/
 /*
 function renderProducts (arr){
     for (product of arr){
@@ -159,6 +163,7 @@ for (product of productList) {
     //product = {name, price, image} -> product.image 
     const productImg = document.createElement('img');
     productImg.setAttribute('src', product.image);
+    productImg.addEventListener('click', openProductDetailAside);
 
     const productInfo = document.createElement('div');
     productInfo.classList.add('product-info');
